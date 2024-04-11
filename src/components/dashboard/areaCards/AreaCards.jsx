@@ -1,34 +1,34 @@
-import AreaCard from "./AreaCard";
-import "./AreaCards.scss";
+import AreaCard from './AreaCard';
+import './AreaCards.scss';
 
 const AreaCards = () => {
   return (
-    <section className="content-area-cards">
+    <section className='content-area-cards'>
       <AreaCard
-        colors={["#e4e8ef", "#475be8"]}
-        percentFillValue={80}
+        colors={['#e4e8ef', '#4ce13f']}
+        percentFillValue={90}
         cardInfo={{
-          title: "Todays Sales",
-          value: "$20.4K",
-          text: "We have sold 123 items.",
+          title: 'Todays LLM Status',
+          value: 'Health 🟢',
+          text: 'We have checked 143 errors.',
         }}
       />
       <AreaCard
-        colors={["#e4e8ef", "#4ce13f"]}
-        percentFillValue={50}
+        colors={['#e4e8ef', '#475be8']}
+        percentFillValue={10}
         cardInfo={{
-          title: "Todays Revenue",
-          value: "$8.2K",
-          text: "Available to payout",
+          title: 'Todays Toxic Input',
+          value: '1.2K',
+          text: 'Available to Production',
         }}
       />
       <AreaCard
-        colors={["#e4e8ef", "#f29a2e"]}
-        percentFillValue={40}
+        colors={['#e4e8ef', '#f29a2e']}
+        percentFillValue={10}
         cardInfo={{
-          title: "In Escrow",
-          value: "$18.2K",
-          text: "Available to payout",
+          title: 'Todays Toxic Output',
+          value: '0.4K',
+          text: 'Available to Production',
         }}
       />
     </section>

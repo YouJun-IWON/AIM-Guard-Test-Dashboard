@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext } from 'react';
 import {
   BarChart,
   Bar,
@@ -7,57 +7,57 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-} from "recharts";
-import { ThemeContext } from "../../../context/ThemeContext";
-import { FaArrowUpLong } from "react-icons/fa6";
-import { LIGHT_THEME } from "../../../constants/themeConstants";
-import "./AreaCharts.scss";
+} from 'recharts';
+import { ThemeContext } from '../../../context/ThemeContext';
+import { FaArrowUpLong } from 'react-icons/fa6';
+import { LIGHT_THEME } from '../../../constants/themeConstants';
+import './AreaCharts.scss';
 
 const data = [
   {
-    month: "Jan",
-    loss: 70,
-    profit: 100,
+    month: 'Jan',
+    Output: 70,
+    Input: 100,
   },
   {
-    month: "Feb",
-    loss: 55,
-    profit: 85,
+    month: 'Feb',
+    Output: 55,
+    Input: 85,
   },
   {
-    month: "Mar",
-    loss: 35,
-    profit: 90,
+    month: 'Mar',
+    Output: 35,
+    Input: 90,
   },
   {
-    month: "April",
-    loss: 90,
-    profit: 70,
+    month: 'April',
+    Output: 90,
+    Input: 70,
   },
   {
-    month: "May",
-    loss: 55,
-    profit: 80,
+    month: 'May',
+    Output: 55,
+    Input: 80,
   },
   {
-    month: "Jun",
-    loss: 30,
-    profit: 50,
+    month: 'Jun',
+    Output: 30,
+    Input: 50,
   },
   {
-    month: "Jul",
-    loss: 32,
-    profit: 75,
+    month: 'Jul',
+    Output: 32,
+    Input: 75,
   },
   {
-    month: "Aug",
-    loss: 62,
-    profit: 86,
+    month: 'Aug',
+    Output: 62,
+    Input: 86,
   },
   {
-    month: "Sep",
-    loss: 55,
-    profit: 78,
+    month: 'Sep',
+    Output: 55,
+    Input: 78,
   },
 ];
 
@@ -77,19 +77,19 @@ const AreaBarChart = () => {
   };
 
   return (
-    <div className="bar-chart">
-      <div className="bar-chart-info">
-        <h5 className="bar-chart-title">Total Revenue</h5>
-        <div className="chart-info-data">
-          <div className="info-data-value">$50.4K</div>
-          <div className="info-data-text">
+    <div className='bar-chart'>
+      <div className='bar-chart-info'>
+        <h5 className='bar-chart-title'>Total Confirmed Error</h5>
+        <div className='chart-info-data'>
+          <div className='info-data-value'>70.4K</div>
+          <div className='info-data-text'>
             <FaArrowUpLong />
             <p>5% than last month.</p>
           </div>
         </div>
       </div>
-      <div className="bar-chart-wrapper">
-        <ResponsiveContainer width="100%" height="100%">
+      <div className='bar-chart-wrapper'>
+        <ResponsiveContainer width='100%' height='100%'>
           <BarChart
             width={500}
             height={200}
@@ -103,11 +103,11 @@ const AreaBarChart = () => {
           >
             <XAxis
               padding={{ left: 10 }}
-              dataKey="month"
+              dataKey='month'
               tickSize={0}
               axisLine={false}
               tick={{
-                fill: `${theme === LIGHT_THEME ? "#676767" : "#f3f3f3"}`,
+                fill: `${theme === LIGHT_THEME ? '#676767' : '#f3f3f3'}`,
                 fontSize: 14,
               }}
             />
@@ -118,31 +118,31 @@ const AreaBarChart = () => {
               axisLine={false}
               tickSize={0}
               tick={{
-                fill: `${theme === LIGHT_THEME ? "#676767" : "#f3f3f3"}`,
+                fill: `${theme === LIGHT_THEME ? '#676767' : '#f3f3f3'}`,
               }}
             />
             <Tooltip
               formatter={formatTooltipValue}
-              cursor={{ fill: "transparent" }}
+              cursor={{ fill: 'transparent' }}
             />
             <Legend
-              iconType="circle"
+              iconType='circle'
               iconSize={10}
-              verticalAlign="top"
-              align="right"
+              verticalAlign='top'
+              align='right'
               formatter={formatLegendValue}
             />
             <Bar
-              dataKey="profit"
-              fill="#475be8"
+              dataKey='Input'
+              fill='#475be8'
               activeBar={false}
               isAnimationActive={false}
               barSize={24}
               radius={[4, 4, 4, 4]}
             />
             <Bar
-              dataKey="loss"
-              fill="#e3e7fc"
+              dataKey='Output'
+              fill='#e3e7fc'
               activeBar={false}
               isAnimationActive={false}
               barSize={24}

@@ -64,7 +64,8 @@
     text-transform: uppercase;
     font-weight: 900;
     color: var(--logo-color);
-    margin-bottom: 8px;
+    margin-bottom: 16px;
+    font-size: 24px;
 
     @media(max-width: 1200px){
         display: none;

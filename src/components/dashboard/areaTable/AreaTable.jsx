@@ -2,69 +2,69 @@ import AreaTableAction from "./AreaTableAction";
 import "./AreaTable.scss";
 
 const TABLE_HEADS = [
-  "Products",
-  "Order ID",
+  "Subject",
+  "Prompt ID",
   "Date",
-  "Customer name",
+  "Customer ID",
   "Status",
-  "Amount",
+  "Attack Type",
   "Action",
 ];
 
 const TABLE_DATA = [
   {
     id: 100,
-    name: "Iphone 13 Pro",
+    name: "Privacy",
     order_id: 11232,
-    date: "Jun 29,2022",
-    customer: "Afaq Karim",
+    date: "Apr 03,2024",
+    customer: "user385",
     status: "delivered",
-    amount: 400,
+    amount: "Jailbreaks",
   },
   {
     id: 101,
-    name: "Macbook Pro",
-    order_id: 11232,
-    date: "Jun 29,2022",
-    customer: "Afaq Karim",
+    name: "Abuse",
+    order_id: 11231,
+    date: "Apr 03,2024",
+    customer: "user737",
     status: "pending",
-    amount: 288,
+    amount: "Role-Playing",
   },
   {
     id: 102,
-    name: "Apple Watch",
-    order_id: 11232,
-    date: "Jun 29,2022",
-    customer: "Afaq Karim",
+    name: "Abuse",
+    order_id: 11230,
+    date: "Apr 03,2024",
+    customer: "user643",
     status: "canceled",
-    amount: 500,
+    amount: "...",
   },
   {
     id: 103,
-    name: "Microsoft Book",
-    order_id: 11232,
-    date: "Jun 29,2022",
-    customer: "Afaq Karim",
+    name: "Inaccurate",
+    order_id: 11203,
+    date: "Apr 03,2024",
+    customer: "user854",
     status: "delivered",
-    amount: 100,
+    amount: "Context Leakage",
   },
   {
     id: 104,
-    name: "Apple Pen",
-    order_id: 11232,
-    date: "Jun 29,2022",
-    customer: "Afaq Karim",
+    name: "Abuse",
+    order_id: 11228,
+    date: "Apr 03,2024",
+    customer: "user153",
     status: "delivered",
-    amount: 60,
+    amount: "Direct Attack",
   },
   {
     id: 105,
-    name: "Airpods",
-    order_id: 11232,
-    date: "Jun 29,2022",
-    customer: "Afaq Karim",
+    name: "Immoral",
+    order_id: 11227,
+    date: "Apr 03,2024",
+    customer: "user493",
     status: "delivered",
-    amount: 80,
+    amount: "...",
   },
 ];
 
@@ -72,7 +72,7 @@ const AreaTable = () => {
   return (
     <section className="content-area-table">
       <div className="data-table-info">
-        <h4 className="data-table-title">Latest Orders</h4>
+        <h4 className="data-table-title">Latest detected attacks</h4>
       </div>
       <div className="data-table-diagram">
         <table>
@@ -99,7 +99,7 @@ const AreaTable = () => {
                       <span className="dt-status-text">{dataItem.status}</span>
                     </div>
                   </td>
-                  <td>${dataItem.amount.toFixed(2)}</td>
+                  <td>{dataItem.amount}</td>
                   <td className="dt-cell-action">
                     <AreaTableAction />
                   </td>
